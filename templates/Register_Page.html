@@ -1,0 +1,27 @@
+{% extends 'Style_Sheet.html' %}
+{% block head %}
+{% block title %}Enter a Username and Password to register.{% endblock title %}
+{% endblock head %}
+{% block content %}
+{% if error %}
+    <p class=error><strong>Error:</strong> {{ error }}
+{% endif %}
+	<form method="post">
+	<div>
+    	<label for="username">Username</label>
+    	<input type="text" name="username" value="{{
+          request.form.username }}">
+  	</div>
+  	<div>
+    	<label for="password">Password</label>
+    	<input type="password" name="password" value="{{
+          request.form.password }}">
+  	</div>
+  	<div>
+    	<input type="submit" class="submit" value="Register">
+  	</div>
+	</form>
+	<p>If you already have an account, <a href="User_Login">Click Here</a>
+	 to login</p>
+
+{% endblock %}

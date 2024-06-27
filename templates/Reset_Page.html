@@ -1,0 +1,30 @@
+{% extends 'Style_Sheet.html' %}
+{% block head %}
+{% block title %}Verify your Username and Password, 
+then enter you new Password to reset your account.{% endblock title %}
+{% endblock head %}
+{% block content %}
+{% if error %}
+    <p class=error><strong>Error:</strong> {{ error }}
+{% endif %}
+	<form method="post">
+	<label for="username">Username</label>
+    	<input type="text" name="username" value="{{
+          request.form.username }}">
+  	</div>
+	<div>
+    	<label for="password">Old Password</label>
+    	<input type="password" name="old password" value="{{
+          request.form.password }}">
+  	</div>
+	<div>
+    	<label for="password">New Password</label>
+    	<input type="password" name="new password" value="{{
+          request.form.password }}">
+  	</div>
+  	<div>
+    	<input type="submit" class="submit" value="Reset">
+  	</div>
+	</form>
+	<h4><a href="Title_Page">Back to Main</a></h4>
+{% endblock content %}
