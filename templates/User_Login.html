@@ -1,0 +1,27 @@
+{% extends 'Style_Sheet.html' %}
+{% block head %}
+{% block title %}Enter your Username and Password to login.{% endblock title %}
+{% endblock head %}
+{% block content %}
+{% if error %}
+    <p class=error><strong>Error:</strong> {{ error }}
+{% endif %}
+	<form method="post">
+	<div>
+    	<label for="username">Username</label>
+    	<input type="text" name="username" value="{{
+          request.form.username }}">
+  	</div>
+  	<div>
+    	<label for="password">Password</label>
+    	<input type="password" name="password" value="{{
+          request.form.password }}">
+  	</div>
+  	<div>
+    	<input type="submit" class="submit" value="Log In">
+  	</div>
+	</form>
+	<p>If you don't have an account, <a href="/">Click Here</a>
+	 to register</p>
+
+{% endblock %}
