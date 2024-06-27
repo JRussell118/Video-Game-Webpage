@@ -1,4 +1,8 @@
-"""This program adds logging for failed user logins, password resetting, and checks
+# Jaden Russell
+# 12/8/2022
+# SDEV 300
+
+"""This program creates a webpage that has at least 3 pages for the user to navigate, logs failed user logins, and checks
 if the passwords match any of the passwords from CommonPasswords.txt"""
 import datetime
 import socket
